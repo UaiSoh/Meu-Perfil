@@ -1,0 +1,129 @@
+table{
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    border-collapse: colapse;
+    background: whitesmoke;
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 15px;
+    vertical-align: top;
+}
+
+th{
+    background: gray;
+    text-align: center;
+}
+
+h1, h2, h3{
+    margin: 0;
+}
+
+
+
+/* Carrossel de imagens */
+
+.galeria {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galeria input {
+    display: none;
+}
+
+.galeria-imagens img {
+    width: 300px;
+    height: 300px;
+    display: none;
+    border-radius: 20px;
+}
+
+#img1:checked ~ .galeria-imagens .foto1,
+#img2:checked ~ .galeria-imagens .foto2,
+#img3:checked ~ .galeria-imagens .foto3 {
+    display: block;
+}
+
+.mini {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.mini label img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.mini label img:hover {
+    border-color: #555;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Estilização do botão */
+
+.botao-organizar{
+    display: flex;
+    gap: 5px;
+}
+
+.add-ucs{
+    background-color: gray;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;        
+}
+
+.add-ucs:hover{
+    background-color: black;
+}
+
+/* Estilo organizador UC */
+
+ul {
+    list-style-type: none;
+     padding: 0;
+}
+
+li {
+    margin: 5px 0px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Validação CPF/EMAIL */
+
+input {
+    padding: 8px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.erro {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+.valido {
+    border: 2px solid green;
+    background-color: #e6ffe6;
+}
